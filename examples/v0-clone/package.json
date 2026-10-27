@@ -1,0 +1,22 @@
+{
+  "name": "v0-clone",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "dotenv -e .env.local -- turbo run dev",
+    "build": "dotenv -e .env.local -- turbo run build",
+    "start": "dotenv -e .env.local -- turbo run start",
+    "typecheck": "turbo run typecheck",
+    "format": "oxfmt apps",
+    "format:check": "oxfmt --check apps"
+  },
+  "devDependencies": {
+    "dotenv-cli": "^8.0.0",
+    "oxfmt": "^0.55.0",
+    "turbo": "^2.5.8"
+  },
+  "packageManager": "bun@1.4.4"
+}
